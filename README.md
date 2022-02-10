@@ -19,7 +19,7 @@
 
 1. The script will go through the file you choose and find all occurrences of modules.
 2. Then it will output them to the terminal in the format we want.
-3. After outputting all modules that were found, it will ask prompt to do a terraform `plan` or `apply` depending on the flag you passed.
+3. After outputting all modules that were found, it will ask you to do a terraform `plan` or `apply` depending on the flag you passed by typing Y/y or N/n. 
 
 ## Options <a name="options"></a>
 
