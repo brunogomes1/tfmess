@@ -8,18 +8,18 @@
 
 ## Introdution <a name="intro"></a>
 
-- My itention to create this script was to make my life easier when working on a project that in a single folder we would have dozens Terraform files (.tf).
+- My intention to create this script was to make my life easier when working on a project that in a single folder we would have dozens Terraform files (.tf).
 
 ## The issue <a name="issue"></a>
 
-- If I wanted to change an specific module like a S3 Bucket I would have to go through the file, find the module I want to work on, copy its name, go to the CLI and type: "`terraform plan -target=module.bucket-1`". And if I wanted to change more than one bucket I would have to search for the other one I wanted and do: "`terraform plan -target=module.bucket-1 -target=module.bucket-2`".
+- If I wanted to change a specific module like an S3 Bucket I would have to go through the file, find the module I want to work on, copy its name, go to the CLI and type: "`terraform plan -target=module.bucket-1`". And if I wanted to change more than one bucket I would have to search for the other one I wanted and do: "`terraform plan -target=module.bucket-1 -target=module.bucket-2`".
 - As you can imagine we wouldn't have just 2 buckets or talking about other resources like CloudFront we would have more than 10, so imagine doing the above 10 times.
 
 ## The script <a name="script"></a>
 
-1. The script will go through the file you choose, and find all occurences of modules.
+1. The script will go through the file you choose and find all occurrences of modules.
 2. Then it will output them to the terminal in the format we want.
-3. After outputing all modules that were found, it will ask prompt to do a terraform `plan` or `apply` depending on the flag you passed.
+3. After outputting all modules that were found, it will ask prompt to do a terraform `plan` or `apply` depending on the flag you passed.
 
 ## Options <a name="options"></a>
 
